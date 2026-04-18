@@ -5,12 +5,12 @@ import App from "./App.jsx";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme.js";
 import { Provider } from "react-redux";
-// import { BrowserRouter } from 'react-router-dom'
+import { store } from "./redux/store.js";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ThemeProvider theme={theme}>
-      <Provider>
+    <ThemeProvider theme={theme} >
+      <Provider store={store}>
         <App />
       </Provider>
     </ThemeProvider>

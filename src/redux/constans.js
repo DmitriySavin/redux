@@ -1,5 +1,7 @@
-export const statusFilters = {
+ const statusFilters = {
     all: "all",
-    active: "acrive",
+    active: "active",
     completed: "completed"
 }
+
+export default statusFilters;
