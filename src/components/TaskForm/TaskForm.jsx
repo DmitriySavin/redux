@@ -8,7 +8,7 @@ const TaskForm = () => {
         e.preventDefault();
         const form = e.target;
         const text = form.elements.text.value.trim();
-        dispatch(addText(RiForwardEndMiniFill.elements.text.value.trim())); 
+        dispatch(addText(form.elements.text.value.trim())); 
         form.reset();   
     }
 
