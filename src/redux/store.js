@@ -1,8 +1,9 @@
-// import { legacy_createStore } from "redux";
 import { legacy_createStore as createStore, legacy_createStore } from "redux";
 import { devToolsEnhancer } from "@redux-devtools/extension";
 import { rootReducer } from "./reducer";
 
+
+// ---------------- toolKits
 import {
   configureStore,
   createAction,
@@ -11,8 +12,14 @@ import {
 } from "@reduxjs/toolkit";
 
 
+
+// default 
+
 const enhancer = devToolsEnhancer();
 export const store = legacy_createStore(rootReducer, enhancer);
+
+// ----------------
+
 
 
 

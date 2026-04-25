@@ -1,5 +1,7 @@
 import s from "./TaskForm.module.css";
 import { useDispatch } from "react-redux";
+import { addTask } from "../../redux/actions"
+import Button from "../Button/Button";
 
 const TaskForm = () => {
     const dispatch = useDispatch();
@@ -8,12 +10,12 @@ const TaskForm = () => {
         e.preventDefault();
         const form = e.target;
         const text = form.elements.text.value.trim();
-        dispatch(addText(form.elements.text.value.trim())); 
+        dispatch(addTask(form.elements.text.value.trim())); 
         form.reset();   
     }
 
   return (
-    <form className={s.form}>
+    <form className={s.form} onSubmit={handleSubmit}>
       <label>
         New Task:
         <input
@@ -23,7 +25,7 @@ const TaskForm = () => {
           className={s.field}
         />
       </label>
-      <button type="button"></button>
+      <button type="button">Add</button>
     </form>
   );
 };

@@ -1,10 +1,10 @@
 import styles from "./TaskList.module.css";
 import { useSelector } from "react-redux";
 import Task from "../Task/Task";
-
+import { getTask } from "../../redux/selectors";
 
 const TaskList = () => {
-  const tasks = useSelector((state) => state.tasks);
+  const tasks = useSelector(getTask);
   console.log(tasks);
 
   return (
