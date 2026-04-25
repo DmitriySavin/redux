@@ -49,3 +49,8 @@ export const tasksSlice = createSlice({
     },
   },
 });
+
+
+export const { addTask, deleteTask, deleteAllCompleted, toggleAllCompleted, toggleCompleted } = tasksSlice.actions;
+
+export const tasksReducer = tasksSlice.reducer;

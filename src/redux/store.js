@@ -14,7 +14,7 @@ export const store = configureStore({
   },
 });
 
-
+console.log(store)
 
 // import {
 //   configureStore,

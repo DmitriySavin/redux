@@ -25,7 +25,7 @@ const TaskForm = () => {
           className={s.field}
         />
       </label>
-      <Button type="button">Add</Button>
+      <Button type="submit">Add</Button>
     </form>
   );
 };

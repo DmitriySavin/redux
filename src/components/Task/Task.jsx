@@ -13,6 +13,7 @@ const Task = ({ task }) => {
   const handleDelete = () => {
     dispatch(deleteTask(task.id));
   };
+console.log(task);
 
   return (
     <div className={s.wrapper}>
@@ -22,7 +23,7 @@ const Task = ({ task }) => {
         checked={task.completed}
         onChange={handleToggle}
       />
-      <p className={s.text}>{task.description}</p>
+      <p className={s.text}>{task.text}</p>
       <button className={s.button} onClick={handleDelete}>
         <MdClose size={24} />
       </button>
