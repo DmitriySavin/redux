@@ -4,13 +4,14 @@ import TaskForm from "./components/TaskForm/TaskForm";
 import TaskList from "./components/TaskList/TaskList";
 import { useEffect } from "react";
 import { useDispatch , useSelector } from "react-redux";
-import { getError , getIsLoading } from "./redux/selectors";
+import { selectError , selectIsLoading } from "./redux/selectors";
 import { fetchTasks } from "./redux/operations";
+import AppBar from "./components/appBar/AppBar";
 
 const App = () => {
   const dispatch = useDispatch();
-  const error = useSelector(getError);
-  const loading = useSelector(getIsLoading);
+  const error = useSelector(selectError);
+  const loading = useSelector(selectIsLoading);
 
   useEffect(() => {
   dispatch(fetchTasks())
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <>
       <Layout>
+        <AppBar />
         <TaskForm />
         {loading && error && <p>АБВГД</p>}
         <TaskList />
